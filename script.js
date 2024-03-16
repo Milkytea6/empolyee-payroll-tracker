@@ -1,12 +1,13 @@
 // Get a reference to the #add-employees-btn element
 const addEmployeesBtn = document.querySelector('#add-employees-btn');
   
+  // Array of empolyees
+  let employeesArray = [];
 
 const collectEmployees = function () {
   // TODO: Get user input to create and return an array of employee objects
   
-  // Array of empolyees
-  let employeesArray = [];
+
 
   // When the user clicks the "Add Employees" button, input windows of first name, 
   // last name, and salary display allowing user to input data into each window.
@@ -46,17 +47,14 @@ const collectEmployees = function () {
 const displayAverageSalary = function (employeesArray) {
   // TODO: Calculate and display the average salary
 
-  // Access each object in employeesArray and get newEmployee.salary key.
-  // Average all the values in newEmployee.salary and console log the result.
-
-
-  // const salaries = employeesArray.inputSalary;
-
-  // const sum = salaries.reduce((acc, curr) => acc + curr, 0);
-  // const average = (sum/employeesArray.length);
-  // console.log(average);
-
-
+  // Access each object in employeesArray and get Employee.salary key.
+  // Asked the Xpert Learning Assistant to show me how to target the salary key in each object inside an array and it gave me this code.
+  const salaries = employeesArray.map(employee => employee.salary);
+  
+  // Average all employee salaries and console log the result.
+  const sum = salaries.reduce((acc, curr) => acc + curr, 0);
+  const average = sum / employeesArray.length;
+  console.log(average);
 }
 
 // Select a random employee
