@@ -6,8 +6,6 @@ const addEmployeesBtn = document.querySelector('#add-employees-btn');
 
 const collectEmployees = function () {
   // TODO: Get user input to create and return an array of employee objects
-  
-
 
   // When the user clicks the "Add Employees" button, input windows of first name, 
   // last name, and salary display allowing user to input data into each window.
@@ -32,8 +30,8 @@ const collectEmployees = function () {
   if (inputContinue) {
     // Allows employees able to be addded to newly pushed array.
     let additionalEmployees = collectEmployees();
-    // Concatenates the employeesArray with additionalEmployees.
-    employeesArray = employeesArray.concat(additionalEmployees);
+    // Pushes additional array into employees array.
+    employeesArray.push(additionalEmployees);
   }
   else {
     return employeesArray;
@@ -60,6 +58,11 @@ const displayAverageSalary = function (employeesArray) {
 // Select a random employee
 const getRandomEmployee = function (employeesArray) {
   // TODO: Select and display a random employee
+
+  // Generate a random number between 0 and array.length.
+  const ranNumArray = Math.floor(Math.random() * employeesArray.length);
+  // Console.log the array with a random number index.
+  console.log(employeesArray[ranNumArray]);
 }
 
 /*
