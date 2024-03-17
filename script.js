@@ -28,10 +28,7 @@ const collectEmployees = function () {
   let inputContinue = window.confirm("Add another employee?");
   
   if (inputContinue) {
-    // Allows employees able to be addded to newly pushed array.
-    let additionalEmployees = collectEmployees();
-    // Pushes additional array into employees array.
-    employeesArray.push(additionalEmployees);
+    collectEmployees();
   }
   else {
     return employeesArray;
