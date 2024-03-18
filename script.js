@@ -1,10 +1,11 @@
 // Get a reference to the #add-employees-btn element
 const addEmployeesBtn = document.querySelector('#add-employees-btn');
-  
-  // Array of empolyees
-  let employeesArray = [];
 
+
+// Array of empolyees
+let employeesArray = [];
 const collectEmployees = function () {
+
   // TODO: Get user input to create and return an array of employee objects
 
   // When the user clicks the "Add Employees" button, input windows of first name, 
@@ -12,7 +13,7 @@ const collectEmployees = function () {
   let inputFirstName = window.prompt("Enter employee's first name.")
   let inputLastName = window.prompt("Enter employee's last name.")
   let inputSalary = parseInt(window.prompt("Enter empolyee's slaray."))
-  
+
   // Collect employee data
   // Store inputs into Employee object.
   let newEmployee = {
@@ -20,15 +21,15 @@ const collectEmployees = function () {
     lastName: inputLastName,
     salary: inputSalary
   };
-  
+
   // Pushes Employee into employeesArray.
   employeesArray.push(newEmployee);
-  
+
   // Then another input window will display asking if the user would like to continue adding or stop adding employees.
   let inputContinue = window.confirm("Add another employee?");
-  
+
   if (inputContinue) {
-    collectEmployees();
+    return collectEmployees();
   }
   else {
     return employeesArray;
@@ -45,11 +46,12 @@ const displayAverageSalary = function (employeesArray) {
   // Access each object in employeesArray and get Employee.salary key.
   // Asked the Xpert Learning Assistant to show me how to target the salary key in each object inside an array and it gave me this code.
   const salaries = employeesArray.map(employee => employee.salary);
-  
+
   // Average all employee salaries and console log the result.
   const sum = salaries.reduce((acc, curr) => acc + curr, 0);
   const average = sum / employeesArray.length;
-  console.log(average);
+  // Added a sentence to this console log
+  console.log(`Average salary of employees is ${average}`);
 }
 
 // Select a random employee
@@ -59,7 +61,9 @@ const getRandomEmployee = function (employeesArray) {
   // Generate a random number between 0 and array.length.
   const ranNumArray = Math.floor(Math.random() * employeesArray.length);
   // Console.log the array with a random number index.
-  console.log(employeesArray[ranNumArray]);
+  // Added a string to this console log
+
+  console.log("Random Employee Array" ,employeesArray[ranNumArray]);
 }
 
 /*
