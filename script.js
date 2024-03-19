@@ -59,11 +59,11 @@ const getRandomEmployee = function (employeesArray) {
   // TODO: Select and display a random employee
 
   // Generate a random number between 0 and array.length.
-  const ranNumArray = Math.floor(Math.random() * employeesArray.length);
+  const ranNum = Math.floor(Math.random() * employeesArray.length);
   // Console.log the array with a random number index.
+  const ranEmployee = employeesArray[ranNum];
   // Added a string to this console log
-
-  console.log("Random Employee Array" ,employeesArray[ranNumArray]);
+  console.log(`Congrats to ${ranEmployee.firstName} ${ranEmployee.lastName}, our random drawing winner.`);
 }
 
 /*
