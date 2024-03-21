@@ -10,9 +10,9 @@ const collectEmployees = function () {
 
   // When the user clicks the "Add Employees" button, input windows of first name, 
   // last name, and salary display allowing user to input data into each window.
-  let inputFirstName = window.prompt("Enter employee's first name.")
-  let inputLastName = window.prompt("Enter employee's last name.")
-  let inputSalary = parseInt(window.prompt("Enter empolyee's slaray."))
+  let inputFirstName = window.prompt("Enter employee's first name.");
+  let inputLastName = window.prompt("Enter employee's last name.");
+  let inputSalary = parseInt(window.prompt("Enter empolyee's slaray."));
 
   // Collect employee data
   // Store inputs into Employee object.

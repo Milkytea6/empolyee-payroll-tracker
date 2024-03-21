@@ -34,4 +34,4 @@ I was given starter code of an non-functioning employee payroll tracker. I added
 [Link text] (https://milkytea6.github.io/empolyee-payroll-tracker/ 'Link to Empolyee Payroll Tracker')
 
 ## Screenshot of Webpage
-![Screenshot of webpage](./employee-payroll-tracker.png)
+![Screenshot of webpage](./assests/images/employee-payroll-tracker.png)
