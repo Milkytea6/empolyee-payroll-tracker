@@ -10,10 +10,16 @@ const collectEmployees = function () {
 
   // When the user clicks the "Add Employees" button, input windows of first name, 
   // last name, and salary display allowing user to input data into each window.
-  let inputFirstName = window.prompt("Enter employee's first name.");
-  let inputLastName = window.prompt("Enter employee's last name.");
-  let inputSalary = parseInt(window.prompt("Enter empolyee's slaray."));
-
+ 
+    let inputFirstName = window.prompt("Enter employee's first name.");
+    let inputLastName = window.prompt("Enter employee's last name.");
+    let inputSalary = parseInt(window.prompt("Enter empolyee's salary. *Use numbers only*"));
+    // If statement to check if values were inputted into each prompt and if inputSalary is NaN. It will alert 'Invalid entry' and call the function again.
+    if (inputFirstName === ''|| inputLastName === '' || inputSalary === '' || isNaN(inputSalary) ) {
+      window.alert("Invalid entry, try adding employee again.");
+      return collectEmployees();
+    };
+  
   // Collect employee data
   // Store inputs into Employee object.
   let newEmployee = {
